@@ -9,7 +9,7 @@ namespace Config.Net
 {
    public class ConfigurationBuilder<T> where T : class
    {
-      private readonly ProxyGenerator _generator = new ProxyGenerator();
+      private static readonly ProxyGenerator _generator = new ProxyGenerator();
       private List<IConfigStore> _stores = new List<IConfigStore>();
       private TimeSpan _cacheInterval = TimeSpan.Zero;
       private readonly List<ITypeParser> _customParsers = new List<ITypeParser>();
